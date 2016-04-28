@@ -24,9 +24,11 @@ default: &default
 development:
   <<: *default
   database: toy_url_development
-  username: <%= ENV['POSTGRES_USER']%>
-  password: <%= ENV['POSTGRES_PASSWORD']%>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   host: localhost
+
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -60,8 +62,8 @@ development:
 test:
   <<: *default
   database: toy_url_test
-  username: <%= ENV['POSTGRES_USER']%>
-  password: <%= ENV['POSTGRES_PASSWORD']%>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   host: localhost
 
 
